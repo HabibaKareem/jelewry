@@ -1,0 +1,449 @@
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: "League Spartan", system-ui, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  background-color: cornsilk;
+  color: #ddd;
+}
+
+#slide3
+{
+  width: 100%;
+  height: 100vh;
+  background-color: #d6bbb1;
+}
+
+#bg {
+  width: 100%;
+  height: 700px;
+background-color: blue;
+  background-position: center;
+  
+  background-size: cover;
+ 
+
+}
+
+#item1{
+ 
+  width: 100%;
+  height: 670px;
+background-image: url("../img/download.jpg");
+  background-position: center;
+  
+  background-size: cover;
+}
+#item2{
+  width: 900px; ;
+  height: 670px;
+background-image: url(../img/87cb68f0-6ad1-43ca-90f3-d0bd361ce430.jfif);
+  background-position: center;
+
+  background-size: cover cover;
+}#item3{
+  width: 100%;
+  height: 670px;
+background-color: blue;
+  background-position: center;
+  
+  background-size: cover;
+}
+
+#caard{
+ 
+  width: 100%;
+  height: 670px;
+background-image: url("../img/Download\ premium\ vector\ of\ Beige\ curve\ abstract\ vector\ mobile\ wallpaper\ by\ Adjima\ about\ vector\,\ curve\ frame\ template\,\ instagram\ story\ plain\,\ abstract\,\ and\ abstract\ backgrounds\ 2765044.jpg");
+  background-position: center;
+  
+  background-size: cover;
+  color: burlywood;
+}
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+
+ul {
+  list-style: none;
+}
+
+
+
+
+
+
+
+
+article {
+  width: 100%;
+  max-width: 1265px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+figure {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 0 30px 0;
+}
+
+figure figcaption {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+
+
+#slide3 button {
+  font: normal normal 400 12pt / 2cap "Golos Text", sans-serif;
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #d1cece;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#slide3 button::after {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #686666a1;
+  content: "";
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+#slide3 button:hover::after {
+  right: 0;
+  transition: all 0.3s ease;
+}
+
+#slide3 button input {
+  display: none;
+}
+
+#slide3 button label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.349);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#slide3 button:hover label {
+  color: black;
+  transition: all 0.3s ease;
+}
+
+#slide3 button label span {
+  display: none;
+}
+
+#slide3 button:not(:has(input:checked)) label span:first-of-type {
+  display: initial;
+}
+
+#slide3 button:has(input:checked) label span:last-of-type {
+  display: initial;
+}
+
+section {
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+  border-right: 1px solid #555;
+  border-bottom: 1px solid #555;
+  border-left: 1px solid #555;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+section::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(
+    90deg,
+    #ff00bb,
+    #ff00b6,
+    #ff00a8,
+    #ff0b93,
+    #ff347a,
+    #ff585f,
+    #ff7a44,
+    #ff9829,
+    #ffb20c,
+    #ffc500,
+    #ffd100,
+    #ffd500
+  );
+  content: "";
+  z-index: 2;
+  transition: all 1.2s ease;
+}
+
+figure:has(button input:checked) ~ section::before {
+  width: 0px;
+  transition: all 1.2s ease;
+}
+
+ section div {
+  flex-grow: 1;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  transition: all 0.4s ease;
+}
+
+figure:has(button input:checked) ~ section {
+  height: 220px;
+  transition: all 0.5s ease;
+}
+
+figure:has(button input:checked) ~ section div,
+figure:has(button input:checked)
+  ~ section
+  div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div {
+  opacity: 1;
+  flex-grow: 2;
+  transition-delay: 0.15s;
+}
+
+figure:has(button input:checked) ~ section div + div,
+figure:has(button input:checked)
+  ~ section
+  div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div {
+  opacity: 1;
+  transition-delay: 0.3s;
+  flex-grow: 3;
+}
+
+figure:has(button input:checked) ~ section div + div + div,
+figure:has(button input:checked)
+  ~ section
+  div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div {
+  opacity: 1;
+  transition-delay: 0.45s;
+  flex-grow: 4;
+}
+
+figure:has(button input:checked) ~ section div + div + div + div,
+figure:has(button input:checked)
+  ~ section
+  div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div {
+  opacity: 1;
+  transition-delay: 0.6s;
+  flex-grow: 5;
+}
+
+figure:has(button input:checked) ~ section div + div + div + div + div,
+figure:has(button input:checked)
+  ~ section
+  div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div {
+  opacity: 1;
+  transition-delay: 0.75s;
+  flex-grow: 6;
+}
+
+figure:has(button input:checked) ~ section div + div + div + div + div + div {
+  opacity: 1;
+  transition-delay: 0.9s;
+  flex-grow: 7;
+}
+
+section div:hover {
+  flex-grow: 2 !important;
+}
+
+section:has(div:hover) div:not(:hover) {
+  flex-grow: 1 !important;
+}
+
+section:has(div:hover) div {
+  transition-delay: 0s !important;
+}
+
+figure:has(button input:checked) ~ section div {
+  animation: pointerFix 1.7s linear 0s 1 normal;
+}
+
+@keyframes pointerFix {
+  0% {
+    pointer-events: none;
+  }
+  99% {
+    pointer-events: none;
+  }
+  100% {
+    pointer-events: initial;
+  }
+}
+
+/* Change Gallery Images */
+
+section div:first-of-type {
+  background-image: url("../img/53b8eb5b-cd05-4cd3-a52e-f85f2a5f9200.jfif");
+}
+
+section div + div {
+  background-image: url("../img/BAIXA\ _\ SS24.jfif");
+}
+
+section div + div + div {
+  background-image: url("../img/This\ afternoon\ I\ spend\ an\ hour\ or\ so\ letting….jfif");
+}
+
+section div + div + div + div {
+  background-image: url("../img/Cory\ Earrings\ •\ shop\ www_oreejewellery\ \(1\).com…");
+}
+
+section div + div + div + div + div {
+  background-image: url("../img/We\ love\ it\ because\ @haileybieber\ loves\ it\ ✨🧇✨\ 🔎….jfif");
+}
+
+section div + div + div + div + div + div {
+  background-image: url("../img/💍.jfif");
+}
+
+section div + div + div + div + div + div + div {
+  background-image: url("../img/df1bfbbf-0cfa-4003-81f3-3bfc8ac2010d.jfif");
+}
+
+section div + div + div + div + div + div + div + div {
+  background-image: url("../img/Jewelry\ for\ Women\ _\ Anthropologie\ Korea\ -\ Women\'s….jfif");
+}
+
+section div + div + div + div + div + div + div + div + div {
+  background-image: url("../img/Make\ a\ statement\ with\ our\ Farah\ Ribbed\ Earrings🤍.jfif");
+}
+
+section div + div + div + div + div + div + div + div + div + div {
+  background-image: url("../img/Photo\ by\ Nataliya\ Melnychuk\ on\ Unsplash.jfif");
+}
+
+section div:last-of-type {
+  background-image: url("../img/Statement\ Earrings\ _\ New\ Arrivals\ –\ Mickey\'s\ Girl.jfif");
+}
+
+@media (max-width: 900px) {
+  figure {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  figure figcaption {
+    margin-bottom: 20px;
+  }
+  figure figcaption p span:first-of-type {
+    display: none;
+  }
+  figure figcaption p span:last-of-type {
+    display: initial;
+  }
+  button {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 700px) {
+  figure figcaption {
+    max-width: unset;
+  }
+  button {
+    max-width: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+  figure:has(button input:checked) ~ section {
+    height: 1000px;
+  }
+}
